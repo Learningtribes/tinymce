@@ -5,14 +5,16 @@
  * For commercial licenses see https://www.tiny.cloud/
  */
 
-import { HTMLElement, Range, window } from '@ephox/dom-globals';
-import { Fun } from '@ephox/katamari';
-import { Css, Element as SugarElement, Height, Insert, Location, Node, Position, Remove, Scroll, Text, Traverse, VisualViewport } from '@ephox/sugar';
+// , window
+import { HTMLElement, Range } from '@ephox/dom-globals';
+/* import { Fun } from '@ephox/katamari';
+import { Css, Element as SugarElement, Height, Insert, Location, Node, Position, Remove, Scroll, Text, Traverse, VisualViewport } from '@ephox/sugar'; */
 import Editor from '../api/Editor';
-import { ScrollIntoViewEvent } from '../api/EventTypes';
+/* import { ScrollIntoViewEvent } from '../api/EventTypes';
 import * as OuterPosition from '../frames/OuterPosition';
-import * as Zwsp from '../text/Zwsp';
+import * as Zwsp from '../text/Zwsp'; */
 
+/*
 interface MarkerInfo {
   readonly element: SugarElement;
   readonly bottom: number;
@@ -179,17 +181,18 @@ const elementIntoWindow = (editor: Editor, element: HTMLElement, alignToTop?: bo
 
 const rangeIntoFrame = (editor: Editor, rng: Range, alignToTop?: boolean) => withMarker(editor, intoFrame, rng, alignToTop);
 const elementIntoFrame = (editor: Editor, element: HTMLElement, alignToTop?: boolean) => withElement(editor, element, intoFrame, alignToTop);
+ */
 
 const scrollElementIntoView = (editor: Editor, element: HTMLElement, alignToTop?: boolean) => {
-  const scroller = editor.inline ? elementIntoWindow : elementIntoFrame;
-  scroller(editor, element, alignToTop);
+  /* const scroller = editor.inline ? elementIntoWindow : elementIntoFrame;
+  scroller(editor, element, alignToTop); */
 };
 
 // This method is made to deal with the user pressing enter, it is not useful
 // if we want for example scroll in content after a paste event.
 const scrollRangeIntoView = (editor: Editor, rng: Range, alignToTop?: boolean) => {
-  const scroller = editor.inline ? rangeIntoWindow : rangeIntoFrame;
-  scroller(editor, rng, alignToTop);
+  /* const scroller = editor.inline ? rangeIntoWindow : rangeIntoFrame;
+  scroller(editor, rng, alignToTop); */
 };
 
 export {
